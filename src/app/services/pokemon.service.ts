@@ -11,15 +11,6 @@ export class PokemonService {
 
   constructor(private http: HttpClient) { }
 
-  // getPokemonList(name?: string): Observable<any> {
-  //   return this.http.get<any>(this.url + name)
-  // }
-
-  // getPokemon(name: string) {
-  //   return this.http.get( `${this.url} / ${name}`)
-  // }
-
-
   getPokemonList(name: string): Observable<any> {
     const url = `${this.url}/${name}`
     return this.http.get<any>(this.url + name)

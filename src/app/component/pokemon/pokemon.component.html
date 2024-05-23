@@ -23,8 +23,10 @@
     <div class="pokemon-note">
       <p>ID: {{ pokemonData.id }}</p>
       <div class="pokemon-img">
-        <img [src]="pokemonData.sprites.front_default" alt="{{ pokemonData.name }}"/>
-        <img [src]="pokemonData.sprites.back_default" alt="{{ pokemonData.name }}"/>
+        <img [src]="pokemonData.sprites.front_default" alt="{{ pokemonData.name }}"
+        />
+        <img [src]="pokemonData.sprites.back_default" alt="{{ pokemonData.name }}"
+        />
       </div>
       <p>Tipo: {{ pokemonData.types[0].type.name.toUpperCase() }}</p>
     </div>
@@ -35,26 +37,26 @@
   </div>
 
   <div class="container-acordion">
-  <mat-accordion>
-    <mat-expansion-panel
-      (closed)="panelOpenState = false"
-      (opened)="panelOpenState = true"
-    >
-      <mat-expansion-panel-header>
-        <mat-panel-title>
+    <mat-accordion>
+      <mat-expansion-panel
+        (closed)="panelOpenState = false"
+        (opened)="panelOpenState = true"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
             <div class="title-box">
-          <h1>VER MÁS</h1>
-        </div>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <h3>Peso: {{ pokemonData.weight }} kg</h3>
-      <h3>Altura: {{ pokemonData.height }}</h3>
-      <h2>Habilidades</h2>
-      <h3>{{ pokemonData.abilities[0].ability.name.toUpperCase() }}</h3>
-      <h3>{{ pokemonData.abilities[1].ability.name.toUpperCase() }}</h3>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
+              <h1>VER MÁS</h1>
+            </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <h3>Peso: {{ pokemonData.weight }} kg</h3>
+        <h3>Altura: {{ pokemonData.height }}</h3>
+        <h2>Habilidades</h2>
+        <h3>{{ pokemonData.abilities[0].ability.name.toUpperCase() }}</h3>
+        <h3>{{ pokemonData.abilities[1].ability.name.toUpperCase() }}</h3>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>
 
 <div class="container-pokedex">
